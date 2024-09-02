@@ -8,10 +8,13 @@ This project is ongoing and currently in a development phase. Contributions and 
 
 
 Current Progress
+
 Implemented Drivers:
 
 stm32f429xx.h: Main header file for STM32F429xx series.
+
 gpio_driver.h and gpio_driver.c: GPIO driver for configuring and using GPIO pins.
+
 spi_driver.h and spi_driver.c: SPI driver for configuring and using SPI protocol.
 
 
@@ -19,8 +22,11 @@ In Progress: UART.c & I2C.c
 
 
 Getting Started
+
 Prerequisites
+
 To work with this project, you will need:
 
 STM32CubeIDE, Keil uVision, IAR: For compiling and uploading the code.
+
 STM32F429I-DISC1 Development Kit: The hardware platform used for testing the code.
