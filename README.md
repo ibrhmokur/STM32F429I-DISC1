@@ -11,7 +11,7 @@ This project is ongoing and currently in a development phase. Contributions and 
 
 ## Current Progress
 
-## Implemented Drivers:
+### Implemented Drivers:
 
 **stm32f429xx.h**: Main header file for STM32F429xx series.
 
