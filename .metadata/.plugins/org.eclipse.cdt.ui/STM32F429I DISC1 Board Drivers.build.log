@@ -1,0 +1,21 @@
+00:19:29 **** Incremental Build of configuration Debug for project STM32F429I DISC1 Board Drivers ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/010i2c_master_tx_testing.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/010i2c_master_tx_testing.d" -MT"Src/010i2c_master_tx_testing.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/010i2c_master_tx_testing.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_gpio_driver.d" -MT"Drivers/Src/stm32f429xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_gpio_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_i2c_driver.d" -MT"Drivers/Src/stm32f429xx_i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_rcc_driver.d" -MT"Drivers/Src/stm32f429xx_rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_rcc_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_spi_driver.d" -MT"Drivers/Src/stm32f429xx_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_spi_driver.o"
+arm-none-eabi-gcc -o "STM32F429I DISC1 Board Drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32F429I-DISC1 Repository\STM32F429I-DISC1 Local Project\STM32F429I DISC1 Board Drivers\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F429I DISC1 Board Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F429I DISC1 Board Drivers.elf
+ 
+arm-none-eabi-size  STM32F429I\ DISC1\ Board\ Drivers.elf 
+arm-none-eabi-objdump -h -S STM32F429I\ DISC1\ Board\ Drivers.elf  > "STM32F429I DISC1 Board Drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   3616	     52	   1604	   5272	   1498	STM32F429I DISC1 Board Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F429I DISC1 Board Drivers.list
+ 
+
+00:19:31 Build Finished. 0 errors, 0 warnings. (took 1s.291ms)
+
