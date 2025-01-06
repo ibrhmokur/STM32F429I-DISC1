@@ -546,6 +546,32 @@
      __vo uint32_t I2SPR;    /* SPI_I2S prescaler register,      Address offset: 0x20 */
  }SPI_RegDef_t;
 
+
+ /*
+  * Peripheral register definition structure for SAI
+  */
+ typedef struct
+ {
+
+ }SAI_RegDef_t;
+
+
+
+
+ /*
+  * peripheral register definition structure for USART
+  */
+ typedef struct
+ {
+ 	__vo uint32_t SR;         /*!< Status register,     							Address offset: 0x00 */
+ 	__vo uint32_t DR;         /*!< Data register,     								Address offset: 0x04 */
+ 	__vo uint32_t BRR;        /*!< Baud rate register,     							Address offset: 0x08 */
+ 	__vo uint32_t CR1;        /*!< Control register 1,     							Address offset: 0x0C */
+ 	__vo uint32_t CR2;        /*!< Control register 2,     							Address offset: 0x10 */
+ 	__vo uint32_t CR3;        /*!< Control register 3,     							Address offset: 0x14 */
+ 	__vo uint32_t GTPR;       /*!< Guard time and prescaler register,     			Address offset: 0x18 */
+ } USART_RegDef_t;
+
 # if 0 // this "CAN_TxMailBox_TypeDef" and others need to be added
  /*
  * CAN Registers
@@ -615,6 +641,16 @@
 #define SPI4	((SPI_RegDef_t*)SPI4_BASEADDR)
 #define SPI5	((SPI_RegDef_t*)SPI5_BASEADDR)
 #define SPI6	((SPI_RegDef_t*)SPI6_BASEADDR)
+
+#define USART1	((USART_RegDef_t*)USART1_BASEADDR
+#define USART2	((USART_RegDef_t*)USART2_BASEADDR
+#define USART3	((USART_RegDef_t*)USART3_BASEADDR
+#define UART4	((USART_RegDef_t*)UART4_BASEADDR
+#define UART5	((USART_RegDef_t*)UART5_BASEADDR
+#define USART6	((USART_RegDef_t*)USART6_BASEADDR
+#define UART7	((USART_RegDef_t*)UART7_BASEADDR
+#define UART8	((USART_RegDef_t*)UART8_BASEADDR
+
 
 #define CAN1	((CAN_RegDef_t*)CAN1_BASEADDR)
 #define CAN2	((CAN_RegDef_t*)CAN2_BASEADDR)
@@ -1149,6 +1185,7 @@
  #include "stm32f429xx_spi_driver.h"
  #include "stm32f429xx_i2c_driver.h"
  #include "stm32f429xx_rcc_driver.h"
+ #include "stm32f429xx_usart_driver.h"
 
 
 #endif /* INC_STM32F429XX_H_ */
