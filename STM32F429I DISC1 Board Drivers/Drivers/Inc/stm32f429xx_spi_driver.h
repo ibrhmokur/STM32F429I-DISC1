@@ -10,8 +10,6 @@
 
 #include "stm32f429xx.h"
 
-
-
 /*
  * Configuration structure for SPIx peripheral
  */

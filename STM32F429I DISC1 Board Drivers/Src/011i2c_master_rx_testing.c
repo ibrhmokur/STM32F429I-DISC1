@@ -1,7 +1,7 @@
 /*
  * 011i2c_master_rx_testing.c
  *
- *  Created on: Jan 6, 2025
+ *  Created on: Jan 12, 2025
  *      Author: OKUR
  */
 
@@ -40,7 +40,7 @@ void I2C1_GPIOInits(void)
 	I2CPins.pGPIOx = GPIOB;
 	I2CPins.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_ALTFN;
 	I2CPins.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_OD;
-	I2CPins.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PULL_UP;
+	I2CPins.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PU;
 	I2CPins.GPIO_PinConfig.GPIO_PinAltFunMode = 4;
 	I2CPins. GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
 
@@ -59,7 +59,7 @@ void I2C1_GPIOInits(void)
 void I2C1_Inits(void)
 {
 	I2C1Handle.pI2Cx = I2C1;
-	I2C1Handle.I2C_Config.I2C_ACKControl = I2C_ACK_ENABLE;
+	I2C1Handle.I2C_Config.I2C_AckControl = I2C_ACK_ENABLE;
 	I2C1Handle.I2C_Config.I2C_DeviceAddress = MY_ADDR;
 	I2C1Handle.I2C_Config.I2C_FMDutyCycle = I2C_FM_DUTY_2;
 	I2C1Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_SM;
@@ -77,7 +77,7 @@ void GPIO_ButtonInit(void)
 	GPIOBtn.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_0;
 	GPIOBtn.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_IN;
 	GPIOBtn.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
-	GPIOBtn.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PULL;
+	GPIOBtn.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
 
 	GPIO_Init(&GPIOBtn);
 
@@ -136,4 +136,3 @@ int main(void)
 	}
 
 }
-

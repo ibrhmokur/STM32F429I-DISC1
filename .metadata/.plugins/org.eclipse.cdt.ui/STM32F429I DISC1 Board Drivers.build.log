@@ -1,70 +1,22 @@
-22:30:48 **** Incremental Build of configuration Debug for project STM32F429I DISC1 Board Drivers ****
+22:34:20 **** Incremental Build of configuration Debug for project STM32F429I DISC1 Board Drivers ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/011i2c_master_rx_testing.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/011i2c_master_rx_testing.d" -MT"Src/011i2c_master_rx_testing.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/011i2c_master_rx_testing.o"
+arm-none-eabi-gcc "../Src/010i2c_master_tx_testing.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/010i2c_master_tx_testing.d" -MT"Src/010i2c_master_tx_testing.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/010i2c_master_tx_testing.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_gpio_driver.d" -MT"Drivers/Src/stm32f429xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_gpio_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_i2c_driver.d" -MT"Drivers/Src/stm32f429xx_i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_rcc_driver.d" -MT"Drivers/Src/stm32f429xx_rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_rcc_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_spi_driver.d" -MT"Drivers/Src/stm32f429xx_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_spi_driver.o"
 arm-none-eabi-gcc "../Drivers/Src/stm32f429xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f429xx_usart_driver.d" -MT"Drivers/Src/stm32f429xx_usart_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f429xx_usart_driver.o"
-../Drivers/Src/stm32f429xx_usart_driver.c: In function 'USART_SetBaudRate':
-../Drivers/Src/stm32f429xx_usart_driver.c:41:45: error: expected ')' before '{' token
-   41 |   if(pUSARTx == USART1 || pUSARTx == USART6)
-      |                                             ^
-      |                                             )
-   42 |   {
-      |   ~                                          
-In file included from D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc/stm32f429xx_usart_driver.h:11,
-                 from ../Drivers/Src/stm32f429xx_usart_driver.c:11:
-D:/STM32F429I-DISC1 Repository/STM32F429I-DISC1 Local Project/STM32F429I DISC1 Board Drivers/Drivers/Inc/stm32f429xx.h:645:17: note: to match this '('
-  645 | #define USART1  ((USART_RegDef_t*)USART1_BASEADDR
-      |                 ^
-../Drivers/Src/stm32f429xx_usart_driver.c:41:17: note: in expansion of macro 'USART1'
-   41 |   if(pUSARTx == USART1 || pUSARTx == USART6)
-      |                 ^~~~~~
-../Drivers/Src/stm32f429xx_usart_driver.c:41:14: warning: comparison between pointer and integer
-   41 |   if(pUSARTx == USART1 || pUSARTx == USART6)
-      |              ^~
-../Drivers/Src/stm32f429xx_usart_driver.c:87:26: error: expected ')' before '}' token
-   87 |   pUSARTx->BRR = tempreg;
-      |                          ^
-      |                          )
-   88 | }
-      | ~                         
-../Drivers/Src/stm32f429xx_usart_driver.c:41:5: note: to match this '('
-   41 |   if(pUSARTx == USART1 || pUSARTx == USART6)
-      |     ^
-../Drivers/Src/stm32f429xx_usart_driver.c:88:1: error: expected expression before '}' token
-   88 | }
-      | ^
-../Drivers/Src/stm32f429xx_usart_driver.c:38:12: warning: unused variable 'tempreg' [-Wunused-variable]
-   38 |   uint32_t tempreg=0;
-      |            ^~~~~~~
-../Drivers/Src/stm32f429xx_usart_driver.c:36:25: warning: unused variable 'F_part' [-Wunused-variable]
-   36 |         uint32_t M_part,F_part;
-      |                         ^~~~~~
-../Drivers/Src/stm32f429xx_usart_driver.c:36:18: warning: unused variable 'M_part' [-Wunused-variable]
-   36 |         uint32_t M_part,F_part;
-      |                  ^~~~~~
-../Drivers/Src/stm32f429xx_usart_driver.c:33:18: warning: unused variable 'usartdiv' [-Wunused-variable]
-   33 |         uint32_t usartdiv;
-      |                  ^~~~~~~~
-../Drivers/Src/stm32f429xx_usart_driver.c:31:18: warning: unused variable 'PCLKx' [-Wunused-variable]
-   31 |         uint32_t PCLKx;
-      |                  ^~~~~
-../Drivers/Src/stm32f429xx_usart_driver.c: In function 'USART_PeriClockControl':
-../Drivers/Src/stm32f429xx_usart_driver.c:250:38: error: expected ')' before '{' token
-  250 |                 if(pUSARTx == USART1)
-      |                   ~                  ^
-      |                                      )
-  251 |                 {
-      |                 ~                     
-../Drivers/Src/stm32f429xx_usart_driver.c:250:17: note: '-Wmisleading-indentation' is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
-  250 |                 if(pUSARTx == USART1)
-      |                 ^~
-../Drivers/Src/stm32f429xx_usart_driver.c:250:17: note: adding '-flarge-source-files' will allow for more column-tracking support, at the expense of compilation time and memory
-../Drivers/Src/stm32f429xx_usart_driver.c:930:1: error: expected declaration or statement at end of input
-  930 | }
-      | ^
-../Drivers/Src/stm32f429xx_usart_driver.c:930:1: error: expected declaration or statement at end of input
-make: *** [Drivers/Src/subdir.mk:31: Drivers/Src/stm32f429xx_usart_driver.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
+arm-none-eabi-gcc -o "STM32F429I DISC1 Board Drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32F429I-DISC1 Repository\STM32F429I-DISC1 Local Project\STM32F429I DISC1 Board Drivers\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F429I DISC1 Board Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F429I DISC1 Board Drivers.elf
+ 
+arm-none-eabi-size  STM32F429I\ DISC1\ Board\ Drivers.elf 
+arm-none-eabi-objdump -h -S STM32F429I\ DISC1\ Board\ Drivers.elf  > "STM32F429I DISC1 Board Drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   3616	     52	   1604	   5272	   1498	STM32F429I DISC1 Board Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F429I DISC1 Board Drivers.list
+ 
 
-22:30:49 Build Failed. 8 errors, 6 warnings. (took 499ms)
+22:34:21 Build Finished. 0 errors, 0 warnings. (took 1s.101ms)
 

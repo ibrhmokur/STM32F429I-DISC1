@@ -35,7 +35,7 @@
 /*
  * ARM Cortex Mx Processor NVIC ISERx Register Addresses
  */
-#define NVIC_ISER0      ( (__vo uint32_t*)0xE000E100 )
+#define NVIC_ISER0      ( (__vo uint32_t*)0xE000E100 )	//Interrupt Set-enable Register
 #define NVIC_ISER1      ( (__vo uint32_t*)0xE000E104 )
 #define NVIC_ISER2      ( (__vo uint32_t*)0xE000E108 )
 #define NVIC_ISER3      ( (__vo uint32_t*)0xE000E10C )
@@ -48,7 +48,7 @@
 /*
  * ARM Cortex Mx Processor NVIC ICERx Register Addresses
  */
-#define NVIC_ICER0      ( (__vo uint32_t*)0XE000E180 )
+#define NVIC_ICER0      ( (__vo uint32_t*)0XE000E180 )	//Interrupt Clear-enable Register
 #define NVIC_ICER1      ( (__vo uint32_t*)0XE000E184 )
 #define NVIC_ICER2      ( (__vo uint32_t*)0XE000E188 )
 #define NVIC_ICER3      ( (__vo uint32_t*)0XE000E18C )
@@ -61,8 +61,8 @@
 /*
  * ARM Cortex Mx Processor Priority Register Address Calculation
  */
-#define NVIC_PR_BASE_ADDR   ( (__vo uint32_t*)0XE000E400 )
-
+#define NVIC_PR_BASE_ADDR   ( (__vo uint32_t*)0XE000E400 )	//Interrupt Priority Registers
+// #define NVIC_IPR0		( (__vo uint32_t*)0XE000E400 )
 
 /*
  * ARM Cortex Mx Processor number of priority bits implemented in Priority Register
@@ -75,10 +75,9 @@
 /******************************************************************************************************************/
 
 /*
- * Memory map in RM0090
+ * Memory map in RM0090 or STM32F427xx-STM32F429xx pdf file
  * Table 1. STM32F4xx register boundary addresses
  */
-
 
 /*
  * Base addresses of Flash and SRAM memories
@@ -100,50 +99,7 @@
 #define	APB2PERIPH_BASE		0x40010000U
 #define	AHB1PERIPH_BASE		0x40020000U
 #define	AHB2PERIPH_BASE		0x50000000U
-
-
-/*
- * Base addresses of Peripherals which are hanging on AHB1 bus
- */
-
- #define	GPIOA_BASEADDR		0x40020000U
- #define	GPIOB_BASEADDR		0x40020400U
- #define	GPIOC_BASEADDR		0x40020800U
- #define	GPIOD_BASEADDR		0x40020C00U
- #define	GPIOE_BASEADDR		0x40021000U
- #define	GPIOF_BASEADDR		0x40021400U
- #define	GPIOG_BASEADDR		0x40021800U
- #define	GPIOH_BASEADDR		0x40021C00U
- #define	GPIOI_BASEADDR		0x40022000U
- #define	GPIOJ_BASEADDR		0x40022400U
- #define	GPIOK_BASEADDR		0x40022800U
- #define	CRC_BASEADDR		0x40023000U
- #define	RCC_BASEADDR		0x40023800U
- #define	FLASH_INTERFACE_REGISTER_BASEADDR		0x40023C00U
- #define	BKPSRAM_BASEADDR		0x40024000U
- #define	DMA1_BASEADDR			0x40026000U
- #define	DMA2_BASEADDR			0x40026400U
- #define	ETHERNET_MAC_BASEADDR	0x40028000U
- #define	DMA2D_BASEADDR			0x4002B000U
- #define	USB_OTH_HS_BASEADDR		0x40040000U
-
-
-/*
- * Base addresses of Peripherals which are hanging on AHB2 bus
- */
-
- #define	RNG_BASEADDR		0x50060800U
- #define	HASH_BASEADDR		0x50060400U
- #define	CRYP_BASEADDR		0x50060000U
- #define	DCMI_BASEADDR		0x50050000U
- #define	USB_OTH_FS_BASEADDR	0x50000000U
-
-
-/*
- * Base addresses of Peripherals which are hanging on AHB3 bus
- */
-
- #define	FMC_BASEADDR		0xA0000000U	//FMC control register
+#define	AHB3PERIPH_BASE		0x60000000U
 
 
 /*
@@ -200,9 +156,54 @@
  #define	TIM11_BASEADDR		0x40014800U
  #define	SPI5_BASEADDR		0x40015000U
  #define	SPI6_BASEADDR		0x40015400U
-
  #define	SAI1_BASEADDR		0x40015800U
  #define	LCD_TFT_BASEADDR	0x40016800U
+
+
+/*
+ * Base addresses of Peripherals which are hanging on AHB1 bus
+ */
+
+ #define	GPIOA_BASEADDR		0x40020000U
+ #define	GPIOB_BASEADDR		0x40020400U
+ #define	GPIOC_BASEADDR		0x40020800U
+ #define	GPIOD_BASEADDR		0x40020C00U
+ #define	GPIOE_BASEADDR		0x40021000U
+ #define	GPIOF_BASEADDR		0x40021400U
+ #define	GPIOG_BASEADDR		0x40021800U
+ #define	GPIOH_BASEADDR		0x40021C00U
+ #define	GPIOI_BASEADDR		0x40022000U
+ #define	GPIOJ_BASEADDR		0x40022400U
+ #define	GPIOK_BASEADDR		0x40022800U
+ #define	CRC_BASEADDR		0x40023000U
+ #define	RCC_BASEADDR		0x40023800U
+ #define	FLASH_INTERFACE_REGISTER_BASEADDR		0x40023C00U
+ #define	BKPSRAM_BASEADDR		0x40024000U
+ #define	DMA1_BASEADDR			0x40026000U
+ #define	DMA2_BASEADDR			0x40026400U
+ #define	ETHERNET_MAC_BASEADDR	0x40028000U
+ #define	DMA2D_BASEADDR			0x4002B000U
+ #define	USB_OTH_HS_BASEADDR		0x40040000U
+
+
+/*
+ * Base addresses of Peripherals which are hanging on AHB2 bus
+ */
+
+ #define	USB_OTH_FS_BASEADDR	0x50000000U
+ #define	DCMI_BASEADDR		0x50050000U
+ #define	CRYP_BASEADDR		0x50060000U
+ #define	HASH_BASEADDR		0x50060400U
+ #define	RNG_BASEADDR		0x50060800U
+
+
+/*
+ * Base addresses of Peripherals which are hanging on AHB3 bus
+ */
+
+ #define	FMC_BASEADDR		0xA0000000U	//FMC control register
+
+
 
 
 /*****************************Peripheral Registers*******************/
@@ -211,8 +212,8 @@
  *STM32F405/415, STM32F407/417, STM32F427/437 and STM32F429/439
  */
 
- /*
- * Flash Interface Registers
+/*
+ * Peripheral register definition structure for Flash Interface
  */
 
  typedef struct{
@@ -228,8 +229,8 @@
 
 
  /*
- * CRC Registers
- */
+  * Peripheral register definition structure for CRC
+  */
 
  typedef struct{
 
@@ -240,8 +241,8 @@
 
 
  /*
- * PWR Registers
- */
+  * Peripheral register definition structure for PWR
+  */
 
  typedef struct{
 
@@ -251,8 +252,8 @@
 
 
  /*
- * RCC Registers
- */
+  * Peripheral register definition structure for RCC
+  */
 
  typedef struct{
 
@@ -290,9 +291,9 @@
      __vo uint32_t DCKCFGR;       /*!< RCC Dedicated Clocks configuration register,                 Address offset: 0x8C */
  }RCC_RegDef_t;
 
-/*
- * GPIO Registers
- */
+ /*
+  * Peripheral register definition structure for GPIO
+  */
 
  typedef struct{
          __vo uint32_t       MODER;           //GPIO port mode register                     Address offset: 0x00;
@@ -308,8 +309,8 @@
 
 
  /*
- * SYSCFG Registers
- */
+  * Peripheral register definition structure for SYSCFG
+  */
 
  typedef struct{
 
@@ -322,8 +323,9 @@
 
 
  /*
- * DMA Registers
- */
+  * Peripheral register definition structure for DMA
+  */
+
 
  typedef struct{
 
@@ -336,7 +338,7 @@
 
 
  /*
-  * EXTI Registers
+  * Peripheral register definition structure for EXTI
   */
 
   typedef struct{
@@ -352,9 +354,9 @@
   }EXTI_RegDef_t;
 
 
- /*
- * ADC Registers
- */
+  /*
+   * Peripheral register definition structure for ADC
+   */
 
  typedef struct
  {
@@ -383,8 +385,9 @@
 
 
  /*
- * DAC Registers
- */
+  * Peripheral register definition structure for DAC
+  */
+
  typedef struct
  {
 
@@ -392,38 +395,39 @@
 
 
  /*
- * DCMI Registers
- */
+  * Peripheral register definition structure for DCMI
+  */
+
  typedef struct
  {
 
  } DCMI_RegDef_t;
 
 
-
  /*
- * LCD-TFT Registers
- */
+  * Peripheral register definition structure for LCD_TFT
+  */
+
  typedef struct
  {
 
  } LCD_TFT_RegDef_t;
 
 
-
  /*
- * Advanced TIMER Registers
- */
+  * Peripheral register definition structure for Advanced TIMERs
+  */
+
  typedef struct
  {
 
  } TIM1_TIM8_RegDef_t;
 
 
-
  /*
- * General Purpose TIMER Registers
- */
+  * Peripheral register definition structure for General Purpose TIMERs 2-5
+  */
+
  typedef struct
  {
 
@@ -432,88 +436,88 @@
 
 
  /*
- * General Purpose TIMER Registers
- */
+  * Peripheral register definition structure for General Purpose TIMERs 9-14
+  */
  typedef struct
  {
 
  } TIM9_TIM14_RegDef_t;
 
 
-
  /*
- * Basic TIMER Registers
- */
+  * Peripheral register definition structure for Basic TIMERs 6-7
+  */
+
  typedef struct
  {
 
  } TIM6_TIM7_RegDef_t;
 
 
-
  /*
- * Independent WATCHDOG Registers
- */
+  * Peripheral register definition structure for Independent WATCHDOG
+  */
+
  typedef struct
  {
 
  } IWDG_RegDef_t;
 
 
-
  /*
- * Window WATCHDOG Registers
- */
+  * Peripheral register definition structure for Window WATCHDOG
+  */
+
  typedef struct
  {
 
  } WWDG_RegDef_t;
 
 
-
  /*
- * Cryptographic Processor Registers
- */
+  * Peripheral register definition structure for Cryptographic Processor
+  */
+
  typedef struct
  {
 
  } CRYP_RegDef_t;
 
 
-
  /*
- * Random Number Generator Registers
- */
+  * Peripheral register definition structure for Random Number Generator
+  */
+
  typedef struct
  {
 
  } RNG_RegDef_t;
 
 
-
  /*
- * Hash processor Registers
- */
+  * Peripheral register definition structure for Hash processor
+  */
+
  typedef struct
  {
 
  } HASH_RegDef_t;
 
 
-
  /*
- * Real-time clock Registers
- */
+  * Peripheral register definition structure for Real-time clock
+  */
+
  typedef struct
  {
 
  } RTC_RegDef_t;
 
 
-
  /*
- * I2C Registers
- */
+  * Peripheral register definition structure for I2C
+  */
+
  typedef struct
  {
      __vo uint32_t CR1;		/* I2C control register 1,			Address offset: 0x00 */
@@ -529,10 +533,10 @@
  } I2C_RegDef_t;
 
 
-
  /*
   * Peripheral register definition structure for SPI
   */
+
  typedef struct
  {
      __vo uint32_t CR1;      /* SPI control register 1,          Address offset: 0x00 */
@@ -546,10 +550,10 @@
      __vo uint32_t I2SPR;    /* SPI_I2S prescaler register,      Address offset: 0x20 */
  }SPI_RegDef_t;
 
-
  /*
   * Peripheral register definition structure for SAI
   */
+
  typedef struct
  {
 
@@ -557,10 +561,10 @@
 
 
 
-
  /*
-  * peripheral register definition structure for USART
+  * Peripheral register definition structure for USART
   */
+
  typedef struct
  {
  	__vo uint32_t SR;         /*!< Status register,     							Address offset: 0x00 */
@@ -604,9 +608,6 @@
 #endif
 
 
-
-
-
 /*
  * Peripheral definitions (Peripheral base addresses typecasted to xxx_RegDef_t)
  */
@@ -642,14 +643,14 @@
 #define SPI5	((SPI_RegDef_t*)SPI5_BASEADDR)
 #define SPI6	((SPI_RegDef_t*)SPI6_BASEADDR)
 
-#define USART1	((USART_RegDef_t*)USART1_BASEADDR
-#define USART2	((USART_RegDef_t*)USART2_BASEADDR
-#define USART3	((USART_RegDef_t*)USART3_BASEADDR
-#define UART4	((USART_RegDef_t*)UART4_BASEADDR
-#define UART5	((USART_RegDef_t*)UART5_BASEADDR
-#define USART6	((USART_RegDef_t*)USART6_BASEADDR
-#define UART7	((USART_RegDef_t*)UART7_BASEADDR
-#define UART8	((USART_RegDef_t*)UART8_BASEADDR
+#define USART1	((USART_RegDef_t*)USART1_BASEADDR)
+#define USART2	((USART_RegDef_t*)USART2_BASEADDR)
+#define USART3	((USART_RegDef_t*)USART3_BASEADDR)
+#define UART4	((USART_RegDef_t*)UART4_BASEADDR)
+#define UART5	((USART_RegDef_t*)UART5_BASEADDR)
+#define USART6	((USART_RegDef_t*)USART6_BASEADDR)
+#define UART7	((USART_RegDef_t*)UART7_BASEADDR)
+#define UART8	((USART_RegDef_t*)UART8_BASEADDR)
 
 
 #define CAN1	((CAN_RegDef_t*)CAN1_BASEADDR)
@@ -781,7 +782,8 @@
  #define	UART4_PCLK_EN()             (RCC->APB1ENR |= (1<<19))
  #define	UART5_PCLK_EN()             (RCC->APB1ENR |= (1<<20))
  #define	USART6_PCLK_EN()            (RCC->APB2ENR |= (1<<5))
-
+ #define	UART7_PCLK_EN()				(RCC->APB1ENR |= (1<<30))
+ #define	UART8_PCLK_EN()				(RCC->APB1ENR |= (1<<31))
 
  /*
  * Clock Disable Macros for USARTx peripherals
@@ -793,7 +795,8 @@
  #define	UART4_PCLK_DI()             (RCC->APB1ENR &= ~(1<<19))
  #define	UART5_PCLK_DI()             (RCC->APB1ENR &= ~(1<<20))
  #define	USART6_PCLK_DI()            (RCC->APB2ENR &= ~(1<<5))
-
+ #define	UART7_PCLK_DI()             (RCC->APB1ENR &= ~(1<<30))
+ #define	UART8_PCLK_DI()             (RCC->APB1ENR &= ~(1<<31))
 
 /*
  * Clock Enable Macros for SYSCFG peripherals
@@ -830,6 +833,8 @@
  #define SPI2_REG_RESET()    do{ (RCC->APB1RSTR |= (1 << 14)); (RCC->APB1RSTR &= ~(1 << 14)); }while(0)
  #define SPI3_REG_RESET()    do{ (RCC->APB1RSTR |= (1 << 15)); (RCC->APB1RSTR &= ~(1 << 15)); }while(0)
  #define SPI4_REG_RESET()    do{ (RCC->APB2RSTR |= (1 << 13)); (RCC->APB2RSTR &= ~(1 << 13)); }while(0)
+ #define SPI5_REG_RESET()    do{ (RCC->APB2RSTR |= (1 << 20)); (RCC->APB1RSTR &= ~(1 << 20)); }while(0)
+ #define SPI6_REG_RESET()    do{ (RCC->APB2RSTR |= (1 << 21)); (RCC->APB2RSTR &= ~(1 << 21)); }while(0)
 
  /*
   * Macros to reset I2Cx peripherals
@@ -847,7 +852,8 @@
  #define UART4_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 19)); (RCC->APB1RSTR &= ~(1 << 19)); }while(0)
  #define UART5_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 20)); (RCC->APB1RSTR &= ~(1 << 20)); }while(0)
  #define USART6_REG_RESET()  do{ (RCC->APB2RSTR |= (1 << 5));  (RCC->APB2RSTR &= ~(1 << 5)); }while(0)
-
+ #define UART7_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 30)); (RCC->APB1RSTR &= ~(1 << 30)); }while(0)
+ #define UART8_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 31)); (RCC->APB1RSTR &= ~(1 << 31)); }while(0)
 
 
  /*
@@ -1181,11 +1187,14 @@
  #define USART_CR3_CTSIE     10
  #define USART_CR3_ONEBIT    11
 
+
  #include "stm32f429xx_gpio_driver.h"
  #include "stm32f429xx_spi_driver.h"
  #include "stm32f429xx_i2c_driver.h"
  #include "stm32f429xx_rcc_driver.h"
  #include "stm32f429xx_usart_driver.h"
+
+
 
 
 #endif /* INC_STM32F429XX_H_ */

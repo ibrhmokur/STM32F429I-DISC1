@@ -1,0 +1,13 @@
+/*
+ * stm32f429xx_usart_driver.h
+ *
+ *  Created on: Jan 12, 2025
+ *      Author: OKUR
+ */
+
+#ifndef INC_STM32F429XX_USART_DRIVER_H_
+#define INC_STM32F429XX_USART_DRIVER_H_
+
+
+
+#endif /* INC_STM32F429XX_USART_DRIVER_H_ */

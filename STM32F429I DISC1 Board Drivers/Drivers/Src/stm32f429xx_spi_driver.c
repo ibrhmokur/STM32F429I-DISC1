@@ -189,6 +189,14 @@ void SPI_DeInit(SPI_RegDef_t *pSPIx)
     {
         SPI4_REG_RESET();
     }
+    else if(pSPIx == SPI5)
+    {
+        SPI5_REG_RESET();
+    }
+    else if(pSPIx == SPI6)
+    {
+        SPI6_REG_RESET();
+    }
 }
 
 
@@ -775,9 +783,9 @@ void SPI_ClearOVRFlag(SPI_RegDef_t *pSPIx)
  * @Note        - None
  *
  *****************************************************************/
-#if 0
+//#if 0
 __weak void SPI_ApplicationEventCallback(SPI_Handle_t *pSPIHandle, uint8_t AppEvent)
 {
     /* This is a week implementation. The application may override this function. */
 }
-#endif
+//#endif
