@@ -23,7 +23,7 @@ This project is ongoing and currently in a development phase. Contributions and 
 
 **UART_driver.h** and **UART_driver.c**: UART driver for configuring and using UART protocol.
 
-
+**RCC_driver.h** and **RCC_driver.c**: RCC driver for configuring and using RCC protocol.
 
 ## Getting Started
 
